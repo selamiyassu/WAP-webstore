@@ -1,0 +1,88 @@
+body {
+    background-color: #f4f4f4;
+    color: #5a5656;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+a { text-decoration: none; }
+h1 { font-size: 23px; }
+h1, p {
+    margin-bottom: 15px;
+}
+strong {
+    font-weight: bold;
+}
+.uppercase { text-transform: uppercase; }
+
+
+#login {
+    margin: 50px auto;
+    width: 300px;
+}
+form fieldset input[type="text"], input[type="password"] {
+    border-color: gray;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    height: 30px;
+    outline: none;
+    padding: 0px 10px;
+    width: 280px;
+
+}
+form fieldset input[type="submit"] {
+    background-color: #ffb900;
+    border-color: #dfeaeb;
+    border-radius: 4px;
+    color: #f4f4f4;
+    cursor: pointer;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    height: 30px;
+    width: 300px;
+
+}
+form fieldset a {
+    color: #5a5656;
+    font-size: 10px;
+}
+form fieldset a:hover { text-decoration: underline; }
+.btn-round {
+    background-color: #5a5656;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #f4f4f4;
+    display: block;
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 125px;
+    text-align: center;
+
+    width: 50px;
+}
+#new {
+    font-size: 10px;
+}
+#pic{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-image: round;
+}
+#but{
+    background-color: blanchedalmond;
+    border-color: gray;
+    border-radius: 4px;
+    color: #f4f4f4;
+    cursor: pointer;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    height: 30px;
+    width: 300px;
+}
+#pic img {
+    border: 1px solid black;
+    border-radius: 10px;
+}

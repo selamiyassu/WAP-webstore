@@ -1,0 +1,71 @@
+.pic {
+	
+}
+
+h1 {
+	text-align: center;
+	color: blue;
+}
+
+.top {
+	border: 2px solid green;
+	width: 220px;
+	border-radius: 10px;
+}
+
+.book {
+	float: left;
+	width: 300px;
+	height: 200px;
+	margin-left: 5px;
+}
+
+#purple {
+	color: purple;
+	font-weight: bold;
+}
+
+#red {
+	color: red;
+}
+
+.head {
+	background-image: url("../images/description/header.jpg");
+}
+
+body {
+	font-family:ubuntu;
+}
+#price {
+	margin-right:300px;
+}
+
+#lin {
+	text-decoration:none;
+}
+
+#log {
+	height:30px;
+	width:120px;
+	margin-left:500px;
+	border-radius: 15px;
+	border: 2px solid red;
+	text-align:center;
+	line-height:30px;
+}
+#log a {
+	text-decoration:none;
+}
+.cart {
+	border: 2px solid green;
+}
+
+.cartright {
+	margin-left: 1100px;
+	background-image: url("../images/description/header.jpg");
+}
+
+.icons {
+	margin: left;
+	float: left;
+}
