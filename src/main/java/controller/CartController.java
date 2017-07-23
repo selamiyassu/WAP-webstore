@@ -45,7 +45,7 @@ public class CartController extends HttpServlet {
 
 		int bookId = Integer.parseInt(request.getParameter("bookId"));
 		Book book = dao.getBookById(bookId);
-		cart.removeBook(book); // add to product Cart
+		cart.removeBook(book); // add to book Cart
 		session.setAttribute("cart", cart);
 		
 		RequestDispatcher view = request.getRequestDispatcher("cart.jsp");

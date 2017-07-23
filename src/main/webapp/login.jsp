@@ -20,6 +20,7 @@
 	<div class="mainContainer">
 			
 		<h3>Please Login or sign up to continue</h3>
+		
 		<div class="box col-sm-4">
 		 <form action="LoginController" method="post">
 			User Name: <input required type="text" value="${cookie.user.value}" name="user_name" class="form-control" /><br />

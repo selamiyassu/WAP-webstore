@@ -79,7 +79,7 @@ public class BookImp {
 	public boolean deleteBook(int bookId) {
 		try {
 			con.createStatement();
-			PreparedStatement stmt = con.prepareStatement("delete from books where pid = ?");
+			PreparedStatement stmt = con.prepareStatement("Delete from books where id = ?");
 			stmt.setInt(1, bookId);
 			stmt.execute(); // con.close();
 			return true;
@@ -91,18 +91,19 @@ public class BookImp {
 	}
 
 	public Book addBook(Book book) {
-
+		System.out.println(book.getCategory_id());
+		//book.setCategory_id(book.getCategory_id() ? book.getCategory_id() : 2);
 		try {
 			PreparedStatement preparedStmt = con.prepareStatement("INSERT INTO books "
 					+ "(title, author, year, type, image, price, category_id) VALUES(?,?,?,?,?,?,?)");
 
-			preparedStmt.setString(2, book.getTitle());
-			preparedStmt.setString(3, book.getAuthor());
-			preparedStmt.setDate(4, (Date) book.getYear());
-			preparedStmt.setString(5, book.getType());
-			preparedStmt.setString(6, book.getImage());
-			preparedStmt.setDouble(7, book.getPrice());
-			preparedStmt.setInt(8, book.getCategory_id());
+			preparedStmt.setString(1, book.getTitle());
+			preparedStmt.setString(2, book.getAuthor());
+			preparedStmt.setDate(3, (Date) book.getYear());
+			preparedStmt.setString(4, book.getType());
+			preparedStmt.setString(5, book.getImage());
+			preparedStmt.setDouble(6, book.getPrice());
+			preparedStmt.setInt(7, book.getCategory_id());
 			preparedStmt.execute();
 
 			return book;

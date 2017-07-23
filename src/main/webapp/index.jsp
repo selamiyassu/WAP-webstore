@@ -47,6 +47,14 @@
 		</div>
 	</div>
 	</nav>
+	<div>
+
+<div>
+ <%@ taglib uri="/WEB-INF/tags.tld" prefix="m" %>  
+Date and Time is: <m:today/> 
+</div>
+
+</div>
 
 	<div class="container">
 		<div class="col-md-3">

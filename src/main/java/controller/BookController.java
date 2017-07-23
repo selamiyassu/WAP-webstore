@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mysql.jdbc.StringUtils;
+
 import dao.BookImp;
 import model.Book;
 
@@ -63,11 +65,12 @@ public class BookController extends HttpServlet{
 		String bookType = request.getParameter("type");
 		String bookImage = request.getParameter("image");
 		double bookPrice = Double.parseDouble(request.getParameter("price"));
-		int bookCategoryId = Integer.parseInt(request.getParameter("categoryId"));
+		int bookCategoryId = Integer.parseInt(StringUtils.isNullOrEmpty(request.getParameter("categoryId")) ? "2" :request.getParameter("categoryId"));
 		Book book = new Book(bookTitle, bookAuthor, bookYear, bookType, bookImage, bookPrice, bookCategoryId);
-		
+
 		String action = request.getParameter("action");
 		if(action.equalsIgnoreCase("edit")) {
+			book.setId(Integer.parseInt(request.getParameter("bookId")));
 			bookDAO.updateBook(book);
 		}
 		else { 
@@ -76,6 +79,5 @@ public class BookController extends HttpServlet{
 		RequestDispatcher view = request.getRequestDispatcher(LIST_BOOKS);
 		request.setAttribute("books", bookDAO.getAllBooks());
 		view.forward(request, response);
-
 	}
 }

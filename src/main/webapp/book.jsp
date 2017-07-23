@@ -54,6 +54,7 @@
 			</p>
 			<input type="hidden" name="categoryId" value="${aBook.category_id}" />
 			<input type="hidden" name="action" value="${action}"/>
+			<input type="hidden" name="bookId" value="${aBook.id}"/>
 			<div>
 				<input type="submit" value="Submit"  class="btn btn-success"/>
 			</div>
